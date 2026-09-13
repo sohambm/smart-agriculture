@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookNest Online Store</title>
+
+<!-- Task 3: External CSS - site-wide theme -->
+<link rel="stylesheet" href="style.css">
+<!-- Task 6: External CSS - image gallery styling -->
+<link rel="stylesheet" href="gallery.css">
+<!-- Task 7: External CSS - price list table -->
+<link rel="stylesheet" href="table.css">
+<!-- Task 8: External CSS - registration form -->
+<link rel="stylesheet" href="form.css">
+<!-- Task 9: External CSS - page layout (header/sidebar/content/footer) -->
+<link rel="stylesheet" href="layout.css">
+
+<!-- ================================================================
+     TASK 2: Internal CSS for Navigation Menu
+     (Style block placed in <head>, as required by Task 2)
+     ================================================================ -->
+<style>
+  nav ul {
+    list-style: none;        /* remove bullet points */
+    margin: 0;
+    padding: 0;
+    background-color: #34495e;
+    display: flex;           /* menu items laid out horizontally */
+  }
+
+  nav ul li {
+    display: inline-block;   /* required technique from task brief */
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: #ecf0f1;
+    text-decoration: none;   /* remove underline */
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    background-color: #1abc9c;  /* hover effect */
+    color: #ffffff;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ==============================================================
+       TASK 1: Inline CSS for Homepage Header
+       Applied directly to <header>, <h1>, <p>
+       ============================================================== -->
+  <header style="background-color:#2c3e50; padding:25px 20px; border:3px solid #1a252f;">
+    <h1 style="color:#f1c40f; margin:0; font-family:Georgia, serif;">BookNest Online Store</h1>
+    <p style="text-align:center; color:#ecf0f1; margin-top:8px;">Your Cozy Corner for Every Genre &mdash; Read More, Pay Less</p>
+  </header>
+
+  <!-- TASK 2: Navigation Menu (styled by the internal CSS above) -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#prices">Price List</a></li>
+      <li><a href="#register">Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- ==============================================================
+       TASK 9: Overall page layout - sidebar (left) + content (right) + footer
+       ============================================================== -->
+  <div class="page-wrapper">
+
+    <!-- TASK 4: Book Categories Sidebar (card look) -->
+    <aside class="sidebar" id="categories">
+      <h2>Categories</h2>
+      <ul class="category-list">
+        <li>Fiction</li>
+        <li>Non-Fiction</li>
+        <li>Science &amp; Tech</li>
+        <li>Children's Books</li>
+        <li>Biography</li>
+        <li>Self-Help</li>
+      </ul>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="content">
+
+      <!-- TASK 5: Book Card Layout using CSS Box Model -->
+      <section id="books">
+        <h2>Featured Books</h2>
+        <div class="book-card">
+          <h3>The Silent Orchard</h3>
+          <p>Fiction &middot; ₹399</p>
+        </div>
+        <div class="book-card">
+          <h3>Atomic Habits</h3>
+          <p>Self-Help &middot; ₹499</p>
+        </div>
+        <div class="book-card">
+          <h3>Cosmos Explained</h3>
+          <p>Science &middot; ₹599</p>
+        </div>
+        <div class="book-card">
+          <h3>The Little Wanderer</h3>
+          <p>Children's &middot; ₹249</p>
+        </div>
+      </section>
+
+      <!-- TASK 6: Image Gallery -->
+      <section id="gallery">
+        <h2>Book Cover Gallery</h2>
+        <div class="gallery">
+          <img src="https://picsum.photos/id/24/200/260" alt="Book cover 1">
+          <img src="https://picsum.photos/id/36/200/260" alt="Book cover 2">
+          <img src="https://picsum.photos/id/48/200/260" alt="Book cover 3">
+          <img src="https://picsum.photos/id/60/200/260" alt="Book cover 4">
+        </div>
+      </section>
+
+      <!-- TASK 10: CSS Effects & Highlighting -->
+      <section>
+        <div class="offer-box">
+          🎉 Flat 20% OFF on all Pre-Orders This Week! 🎉
+        </div>
+      </section>
+
+      <!-- TASK 7: Table Styling for Price List -->
+      <section id="prices">
+        <h2>Price List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Book Title</th>
+              <th>Category</th>
+              <th>Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>The Silent Orchard</td>
+              <td>Fiction</td>
+              <td>399</td>
+            </tr>
+            <tr>
+              <td>Atomic Habits</td>
+              <td>Self-Help</td>
+              <td>499</td>
+            </tr>
+            <tr>
+              <td>Cosmos Explained</td>
+              <td>Science</td>
+              <td>599</td>
+            </tr>
+            <tr>
+              <td>The Little Wanderer</td>
+              <td>Children's</td>
+              <td>249</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- TASK 8: Registration Form -->
+      <section id="register">
+        <h2>New Member Registration</h2>
+        <form>
+          <fieldset>
+            <legend>Your Details</legend>
+
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email"><br>
+
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"><br>
+
+            <button type="submit">Register</button>
+          </fieldset>
+        </form>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- TASK 9: Footer -->
+  <footer>
+    <p>&copy; 2026 BookNest Online Store | Web Development Laboratory - Experiment 2</p>
+  </footer>
+
+</body>
+</html>

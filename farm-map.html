@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Plot Navigation</title>
+</head>
+<body>
+
+    <h1>Farm Plot Map</h1>
+    <p>Click on a plot to view its details.</p>
+
+    <!-- Farm Map Image -->
+    <img src="C:\Users\EXAM\Downloads\farmmap.jpg"
+         alt="Farm Plot Map"
+         usemap="#farmmap"
+         width="450"
+height="450">
+
+    <!-- Image Map -->
+    <map name="farmmap">
+
+        <!-- Plot A -->
+        <area shape="rect"
+              coords="0,0,265,200"
+              href="plot-a.html"
+              alt="Plot A"
+              title="Plot A">
+
+        <!-- Plot B -->
+        <area shape="rect"
+              coords="265,0,530,200"
+              href="plot-b.html"
+              alt="Plot B"
+              title="Plot B">
+
+        <!-- Plot C -->
+        <area shape="rect"
+              coords="530,0,800,200"
+              href="plot-c.html"
+              alt="Plot C"
+              title="Plot C">
+
+    </map>
+
+    <h2>Farm Plots</h2>
+
+    <ul>
+        <li><a href="plot-a.html">Plot A</a></li>
+        <li><a href="plot-b.html">Plot B</a></li>
+        <li><a href="plot-c.html">Plot C</a></li>
+    </ul>
+
+</body>
+</html>

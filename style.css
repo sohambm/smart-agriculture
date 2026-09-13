@@ -1,0 +1,97 @@
+<header id="home" style="background-color:#3d8b40; padding:25px 20px; border:3px solid #2e6b35;">
+
+    <h1 style="color:#ffffff; margin:0;">Smart Irrigation Advisory System</h1>
+
+    <p style="text-align:center; color:#eafaf1; font-style:italic;">Smart Irrigation using AI &amp; Sensor Technology</p>
+
+    <p style="text-align:center; color:#eafaf1;">This system uses AI and sensor technology to provide smart irrigation recommendations.</p>
+
+    <h2 style="color:#ffffff;">K.J. Somaiya Applied Agricultural Research</h2>
+
+    <h3 style="color:#eafaf1;">Agriculture Portal</h3>
+
+    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449"
+         width="400"
+         height="250"
+         alt="Smart Irrigation Agriculture Farm">
+
+    <p style="text-align:center; color:#ffffff;">Current Crop Season: <b>Monsoon 2026</b></p>
+
+</header>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9;
+}
+
+h1, h2, h3 {
+    color: #2e6b35;
+}
+
+footer {
+    background-color: #2e6b35;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}
+
+aside {
+    border: 1px solid #cccccc;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    padding: 18px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 20px;
+    max-width: 250px;
+}
+
+aside h3 {
+    color: #2e6b35;
+    margin-top: 0;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+article {
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+article h2 {
+    margin-top: 0;
+}
+
+.alert-box {
+    background-color: #ffecb3;
+    color: #7a4a00;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.6);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 8px rgba(255, 152, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(255, 152, 0, 1);
+    }
+}

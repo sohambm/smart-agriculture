@@ -1,0 +1,29 @@
+.page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+aside {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer {
+    width: 100%;
+}
+
+
+@media (max-width: 700px) {
+    .page-wrapper {
+        flex-direction: column;
+    }
+}

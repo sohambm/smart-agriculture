@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farmer Registration</title>
+    <link rel="stylesheet" href="form.css"> 
+</head>
+
+<body>
+
+    <h1>Farmer Registration Form</h1>
+
+    <form id="registrationForm">
+
+        <fieldset>
+            <legend>Farmer Details</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your full name"
+                   required autofocus>
+            <br><br>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile"
+                   placeholder="Enter 10-digit mobile number"
+                   required>
+            <span id="mobileError"></span>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email"
+                   required>
+            <span id="emailError"></span>
+            <br><br>
+
+            <label for="plot">Plot ID:</label>
+            <input type="text" id="plot" name="plot"
+                   placeholder="Example: Plot 102"
+                   required>
+            <br><br>
+
+            <label for="village">Village:</label>
+            <input type="text" id="village" name="village"
+                   placeholder="Enter village name"
+                   required>
+            <br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Farm Details</legend>
+
+            <label for="stage">Crop Stage:</label>
+            <select id="stage" name="stage" required>
+                <option value="">Select Crop Stage</option>
+                <option value="germination">Germination</option>
+                <option value="vegetative">Vegetative</option>
+                <option value="flowering">Flowering</option>
+                <option value="maturity">Maturity</option>
+                <option value="harvesting">Harvesting</option>
+            </select>
+            <br><br>
+
+            <label for="soil">Soil Type:</label>
+            <select id="soil" name="soil" required>
+                <option value="">Select Soil Type</option>
+                <option value="black">Black Soil</option>
+                <option value="alluvial">Alluvial Soil</option>
+                <option value="red">Red Soil</option>
+                <option value="sandy">Sandy Soil</option>
+                <option value="loamy">Loamy Soil</option>
+            </select>
+            <br><br>
+
+            <label for="irrigation">Irrigation Method:</label>
+            <select id="irrigation" name="irrigation" required>
+                <option value="">Select Irrigation Method</option>
+                <option value="drip">Drip Irrigation</option>
+                <option value="sprinkler">Sprinkler Irrigation</option>
+                <option value="flood">Flood Irrigation</option>
+                <option value="furrow">Furrow Irrigation</option>
+            </select>
+            <br><br>
+
+            <label for="date">Registration Date:</label>
+            <input type="date" id="date" name="date" required>
+            <br><br>
+
+            <label for="photo">Farm Photo:</label>
+            <input type="file" id="photo" name="photo"
+                   accept="image/*"
+                   required>
+            <br><br>
+
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Register Farmer">
+        <input type="reset" value="Clear">
+
+    </form>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+
+            let mobile = document.getElementById("mobile").value.trim();
+            let email = document.getElementById("email").value.trim();
+
+            let valid = true;
+
+            document.getElementById("mobileError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+
+            if (!/^[6-9][0-9]{9}$/.test(mobile)) {
+                document.getElementById("mobileError").innerHTML =
+                    " Enter a valid 10-digit Indian mobile number";
+                valid = false;
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById("emailError").innerHTML =
+                    " Enter a valid email address";
+                valid = false;
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>
